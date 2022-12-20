@@ -4,6 +4,11 @@ import Greeting from './components/pure/greeting';
 import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
 import OnlineList from './components/container/online_list';
+import Ejemplo1 from './hooks/Ejemplo1';
+import Ejemplo2 from './hooks/Ejemplo2';
+import MiComponenteContexto from './hooks/Ejemplo3';
+import Ejemplo4 from './hooks/Ejemplo4';
+import GreetingStyle from './components/pure/greetingStyle';
 
 function App() {
   return (
@@ -17,7 +22,20 @@ function App() {
         {/* <GreetingF name= "Cristian"></GreetingF> */}
         {/* Componente de task_list */}
         {/* <TaskListComponent></TaskListComponent> */}
-        <OnlineList></OnlineList>
+        
+        {/* <OnlineList></OnlineList> */}
+
+        {/* Ejemplos de usos de hooks */}
+        {/* <Ejemplo1></Ejemplo1> */}
+        {/* <Ejemplo2></Ejemplo2> */}
+        {/* <MiComponenteContexto></MiComponenteContexto> */}
+        {/* <Ejemplo4 nombre='Cristian'>
+          <h3>
+            Contenido del props.children
+          </h3>
+        </Ejemplo4> */}
+
+        <GreetingStyle name="Cristian"></GreetingStyle>
       </header>
     </div>
   );
