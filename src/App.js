@@ -9,6 +9,8 @@ import Ejemplo2 from './hooks/Ejemplo2';
 import MiComponenteContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyle from './components/pure/greetingStyle';
+import Clock from './components/pure/Clock';
+import Father from './components/container/father';
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
         {/* Componente de task_list */}
         {/* <TaskListComponent></TaskListComponent> */}
         
-        {/* <OnlineList></OnlineList> */}
+        <OnlineList></OnlineList>
 
         {/* Ejemplos de usos de hooks */}
         {/* <Ejemplo1></Ejemplo1> */}
@@ -35,7 +37,13 @@ function App() {
           </h3>
         </Ejemplo4> */}
 
-        <GreetingStyle name="Cristian"></GreetingStyle>
+        {/* <GreetingStyle name="Cristian"></GreetingStyle> */}
+        {/* <Clock></Clock> */}
+
+
+        {/* Gestion de eventos */}
+        {/* <Father></Father> */}
+      
       </header>
     </div>
   );
