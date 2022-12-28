@@ -11,6 +11,8 @@ import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyle from './components/pure/greetingStyle';
 import Clock from './components/pure/Clock';
 import Father from './components/container/father';
+import OptionalRender from './components/pure/optionalRender';
+import ColorRgb from './components/pure/colorRgb';
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
         {/* Componente de task_list */}
         {/* <TaskListComponent></TaskListComponent> */}
         
-        <OnlineList></OnlineList>
+        {/* <OnlineList></OnlineList> */}
 
         {/* Ejemplos de usos de hooks */}
         {/* <Ejemplo1></Ejemplo1> */}
@@ -43,6 +45,9 @@ function App() {
 
         {/* Gestion de eventos */}
         {/* <Father></Father> */}
+        {/* Ejemplos de renderizado condicional */}
+        {/* <OptionalRender></OptionalRender> */}
+        <ColorRgb></ColorRgb>
       
       </header>
     </div>

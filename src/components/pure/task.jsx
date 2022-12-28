@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 
 // Importamos la hoja de estilos de task.scss
-import '../../styles/task.scss'
+import '../../App.css'
 import { LEVELS } from '../../models/levels.enum';
 
 const TaskComponent = ({ task, complete, remove }) => {

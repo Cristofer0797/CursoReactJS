@@ -4,7 +4,7 @@ import { Task } from '../../models/task.class';
 import TaskComponent from '../pure/task';
 
 // Importamos la hoja de estilos de task.scss
-import '../../styles/task.scss'
+import '../../App.css' 
 import TaskForm from '../pure/forms/taskForm';
 
 const TaskListComponent = () => {
