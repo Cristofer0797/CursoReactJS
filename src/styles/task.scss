@@ -1,0 +1,16 @@
+.papelera{
+    height: 30px;
+    cursor: pointer;
+}
+.icon1{
+    height: 30px;
+    cursor: pointer;
+}
+.task-completed{
+    color: gray;
+    text-decoration: line-through;
+}
+.task-pending{
+    font-weight: bold;
+    color: tomato;
+}

@@ -13,6 +13,8 @@ import Clock from './components/pure/Clock';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import ColorRgb from './components/pure/colorRgb';
+import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 function App() {
   return (
@@ -47,7 +49,11 @@ function App() {
         {/* <Father></Father> */}
         {/* Ejemplos de renderizado condicional */}
         {/* <OptionalRender></OptionalRender> */}
-        <ColorRgb></ColorRgb>
+        {/* <ColorRgb></ColorRgb> */}
+
+        {/* Uso de Formik y Yup */}
+        {/* <LoginFormik></LoginFormik> */}
+        <RegisterFormik></RegisterFormik>
       
       </header>
     </div>

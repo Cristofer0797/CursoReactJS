@@ -4,7 +4,7 @@ import { Task } from '../../models/task.class';
 import TaskComponent from '../pure/task';
 
 // Importamos la hoja de estilos de task.scss
-import '../../App.css' 
+import '../../styles/task.scss' 
 import TaskForm from '../pure/forms/taskForm';
 
 const TaskListComponent = () => {
@@ -20,7 +20,10 @@ const TaskListComponent = () => {
     // Control del ciclo de vida del componente
     useEffect(() => {
         console.log("Modificacion de tareas");
-        setLoading(false);
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000)
+        
         return () => {
             console.log("Componente a punto de desaparecer")
         };
@@ -45,10 +48,45 @@ const TaskListComponent = () => {
 
     function addTask(task){
         console.log("delete this task:", task);
-        const index = tasks.indexOf(task);
         const tempTask = [...tasks];
         tempTask.push(task);
         setTasks(tempTask);
+    }
+
+    const Table = () => {
+        return(
+            <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Priority</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {tasks.map((task, index) => {
+                            return (
+                                    <TaskComponent 
+                                        key={index} 
+                                        task={task}
+                                        complete={completeTask}
+                                        remove={deleteTask}>
+                                    </TaskComponent>
+                                    )
+                                })}
+
+                    </tbody>
+            </table>
+        )
+    }
+
+    let taskTable;
+
+    if (tasks.length > 0) {
+        taskTable = <Table></Table>
+    }else{
+        taskTable = <h3>No hay tareas para mostrar</h3>
     }
 
     return (
@@ -62,35 +100,13 @@ const TaskListComponent = () => {
                     </div>
                     {/* Card Body */}
                     <div className='card-body' style={{position: 'relative', heigth: '400px'}}>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Description</th>
-                                    <th>Priority</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {tasks.map((task, index) => {
-                                    return (
-                                        <TaskComponent 
-                                            key={index} 
-                                            task={task}
-                                            complete={completeTask}
-                                            remove={deleteTask}>
-                                        </TaskComponent>
-                                    )
-                                })}
-
-                            </tbody>
-                        </table>
+                        {loading ? (<p>Loading...</p>) : taskTable}
                     </div>
                     
                 </div>
                 
             </div>
-            <TaskForm add={addTask}></TaskForm>
+            <TaskForm add={addTask} length={tasks.length}></TaskForm>
         </div>
     );
 };

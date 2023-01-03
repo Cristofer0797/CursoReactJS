@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Conect } from '../../models/conect.class';
-import '../../App.css'
+import '../../styles/task.scss'
 
 const Online = ({ conect, enlinea, remover}) => {
     return (
