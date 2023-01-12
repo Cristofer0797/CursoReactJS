@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 
 const loginSchema = Yup.object().shape(
     {
@@ -17,6 +18,8 @@ const LoginFormik = () => {
         password: ''
     }
 
+const history = useNavigate();
+
     return (
         <div>
             <h4>Formik Form</h4>
@@ -28,6 +31,7 @@ const LoginFormik = () => {
             onSubmit={async(values) => {
                 await new Promise((r) => setTimeout(r, 100));
                 alert(JSON.stringify(values, null, 2));
+                history('/profile')
             }}>
 
                 {/* Obtener props de Formik */}

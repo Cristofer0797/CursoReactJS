@@ -27,7 +27,7 @@ function App() {
         {/* Componente funcional */}
         {/* <GreetingF name= "Cristian"></GreetingF> */}
         {/* Componente de task_list */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
         
         {/* <OnlineList></OnlineList> */}
 
@@ -53,7 +53,7 @@ function App() {
 
         {/* Uso de Formik y Yup */}
         {/* <LoginFormik></LoginFormik> */}
-        <RegisterFormik></RegisterFormik>
+        {/* <RegisterFormik></RegisterFormik> */}
       
       </header>
     </div>
