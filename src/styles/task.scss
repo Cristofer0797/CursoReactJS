@@ -14,3 +14,31 @@
     font-weight: bold;
     color: tomato;
 }
+.buttoons{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    
+}
+.likes{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.count{
+    margin: 10px 150px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+.textl{
+    margin: 25px 30px;
+}
+.pranks{
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}

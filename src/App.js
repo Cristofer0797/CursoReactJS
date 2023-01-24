@@ -15,6 +15,9 @@ import OptionalRender from './components/pure/optionalRender';
 import ColorRgb from './components/pure/colorRgb';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
+import AsyncExample from './components/pure/AsyncExample';
+import AxiosExample from './components/pure/AxiosExample';
+import PranksNorris from './components/pure/PranksNorris';
 
 function App() {
   return (
@@ -27,7 +30,7 @@ function App() {
         {/* Componente funcional */}
         {/* <GreetingF name= "Cristian"></GreetingF> */}
         {/* Componente de task_list */}
-        <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
         
         {/* <OnlineList></OnlineList> */}
 
@@ -54,6 +57,11 @@ function App() {
         {/* Uso de Formik y Yup */}
         {/* <LoginFormik></LoginFormik> */}
         {/* <RegisterFormik></RegisterFormik> */}
+
+        {/* Ejemplo funciones asincronas */}
+        {/* <AsyncExample></AsyncExample> */}
+        {/* <AxiosExample></AxiosExample> */}
+        <PranksNorris></PranksNorris>
       
       </header>
     </div>
